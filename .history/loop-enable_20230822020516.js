@@ -1,6 +1,6 @@
 const buttonElement = document.getElementsByClassName("fullscreen-icon")[0];
 
-var loopButton = document.createElement("button");
+var loopButton = document.createElement("div");
 var text = document.createTextNode("loop");
 loopButton.appendChild(text);
 loopButton.setAttribute("loop", "");
