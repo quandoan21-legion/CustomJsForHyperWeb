@@ -3,7 +3,7 @@ const newButton = document.createElement('button');
 var videoTagElement = document.getElementsByTagName('video')[0];
 var queryVideoTag = document.querySelector('video');
 var titleVideoTag =  document.getElementsByClassName('slim-video-information-title')
-titleVideoTag.after(newButton);
+queryVideoTag.after(newButton);
 
 if (queryVideoTag.hasAttribute('loop')) {
 newButton.textContent = 'Un-Loop Video!';
