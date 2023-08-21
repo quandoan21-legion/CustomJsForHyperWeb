@@ -1,27 +1,31 @@
 const newButton = document.createElement('button');
+newButton.textContent = 'Loop Video!';
 
 var videoTagElement = document.getElementsByTagName('video')[0];
 var queryVideoTag = document.querySelector('video');
-queryVideoTag.after(newButton);
 
 if (queryVideoTag.hasAttribute('loop')) {
-newButton.textContent = 'Un-Loop Video!';
-document.body.appendChild(newButton);
+    queryVideoTag.removeAttribute('loop');
+    newButton.textContent = 'Loop Video!';
 }
 else {
-newButton.textContent = 'Loop Video!';
-document.body.appendChild(newButton);
+    videoTagElement.setAttribute("loop", "");
+    newButton.textContent = 'Un-Loop Video!';x
 }
 
+
+document.videoTagElement.appendChild(newButton);
 
 newButton.addEventListener('click', () => {
     if (queryVideoTag.hasAttribute('loop')) {
         queryVideoTag.removeAttribute('loop');
-        newButton.innerHTML = 'Loop Video!';
+        newButton.textContent = 'Loop Video!';
     }
     else {
         var videoTagElement = document.getElementsByTagName('video')[0];
         videoTagElement.setAttribute("loop", "");
-        newButton.innerHTML = 'Un-Loop Video!';
+        newButton.textContent = 'Un-Loop Video!';
     }
+
+    document.videoTagElement.appendChild(newButton);
 });
