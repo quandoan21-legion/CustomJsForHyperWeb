@@ -9,7 +9,7 @@ var element = document.getElementsByClassName("player-controls-bottom")[0];
 element.appendChild(loopButton);
 
 buttonElement.onclick = function () {
-    const videoElement = document.getElementID("loop-button");
+    const videoElement = document.getElementsByTagName("button")[0];
     if (videoElement.hasAttribute('loop')) {
         videoElement.removeAttribute('loop');
         buttonElement.innerHTML = 'Loop Video!';
